@@ -1,0 +1,183 @@
+import type { CoinData, OrderBookEntry, PortfolioHolding, WeatherInfo } from '../types';
+
+export const TAGLINES = [
+  "Professional Trading. Unprofessional Interface.",
+  "Because apparently one chart wasn't enough.",
+  "Your portfolio is fine. Probably.",
+  "More charts. More buttons. More regret.",
+  "Please remain calm. The candles are moving.",
+  "We made trading simpler by adding 73 more controls.",
+  "Everything is under control. Except the interface.",
+  "This button probably does something.",
+  "Congratulations. You found Advanced Mode.",
+  "Financially unnecessary complexity.",
+  "Click responsibly.",
+];
+
+export const INITIAL_COINS: CoinData[] = [
+  {
+    id: 'bitcoin',
+    symbol: 'BTC',
+    name: 'Bitcoin (Simulated)',
+    price: 104321.42,
+    change24h: 5.64,
+    high24h: 106800.00,
+    low24h: 98400.00,
+    volume: 8492049102,
+    volatility: 'Extreme',
+    sentiment: 'Greedy Chaos',
+    panicRating: 88,
+    color: '#f7931a',
+    sparkline: [98000, 99500, 99000, 101200, 100800, 103400, 104321],
+  },
+  {
+    id: 'ethereum',
+    symbol: 'ETH',
+    name: 'Ethereum (Simulated)',
+    price: 3892.15,
+    change24h: -2.31,
+    high24h: 4050.00,
+    low24h: 3780.00,
+    volume: 4102948190,
+    volatility: 'Unpredictable',
+    sentiment: 'Mild Panic',
+    panicRating: 64,
+    color: '#627eea',
+    sparkline: [3980, 4020, 3990, 3910, 3850, 3920, 3892],
+  },
+  {
+    id: 'solana',
+    symbol: 'SOL',
+    name: 'Solana (Simulated)',
+    price: 242.80,
+    change24h: 12.85,
+    high24h: 255.00,
+    low24h: 210.00,
+    volume: 2948102948,
+    volatility: 'Hyperactive',
+    sentiment: 'Euphoric Regret',
+    panicRating: 94,
+    color: '#14f195',
+    sparkline: [210, 218, 225, 230, 222, 238, 242.8],
+  },
+  {
+    id: 'panic-token',
+    symbol: 'PANIC',
+    name: 'PanicX Token',
+    price: 42.069,
+    change24h: 420.69,
+    high24h: 99.99,
+    low24h: 0.001,
+    volume: 999999999,
+    volatility: 'Catastrophic',
+    sentiment: 'Maximum Cope',
+    panicRating: 100,
+    color: '#cyan',
+    sparkline: [1, 5, 2, 80, 12, 99, 42.069],
+  },
+  {
+    id: 'cope-coin',
+    symbol: 'COPE',
+    name: 'Pure Cope Coin',
+    price: 0.000042,
+    change24h: -89.4,
+    high24h: 0.005,
+    low24h: 0.00001,
+    volume: 124000,
+    volatility: 'Terminal',
+    sentiment: 'Despair',
+    panicRating: 99,
+    color: '#ec4899',
+    sparkline: [0.005, 0.003, 0.001, 0.0005, 0.0002, 0.00008, 0.000042],
+  },
+  {
+    id: 'regret-token',
+    symbol: 'REGRT',
+    name: 'Instant Regret',
+    price: 13.37,
+    change24h: 0.00,
+    high24h: 13.37,
+    low24h: 13.37,
+    volume: 0,
+    volatility: 'Frozen in Fear',
+    sentiment: 'Numb',
+    panicRating: 73,
+    color: '#eab308',
+    sparkline: [13.37, 13.37, 13.37, 13.37, 13.37, 13.37, 13.37],
+  }
+];
+
+export const INITIAL_ORDER_BOOK: OrderBookEntry[] = [
+  { price: 104450.00, amount: 0.421, total: 43973.45, depth: 85, confidence: 12, drama: 'HIGH', panic: 'CRITICAL', type: 'sell' },
+  { price: 104410.50, amount: 1.250, total: 130513.12, depth: 72, confidence: 24, drama: 'MEDIUM', panic: 'HIGH', type: 'sell' },
+  { price: 104380.00, amount: 0.090, total: 9394.20, depth: 50, confidence: 8, drama: 'SUSPICIOUS', panic: 'ELEVATED', type: 'sell' },
+  { price: 104340.20, amount: 3.110, total: 324498.02, depth: 30, confidence: 45, drama: 'MILD', panic: 'MODERATE', type: 'sell' },
+  { price: 104321.42, amount: 0.001, total: 104.32, depth: 0, confidence: 99, drama: 'CURRENT', panic: 'STABLEISH', type: 'buy' },
+  { price: 104290.00, amount: 2.400, total: 250296.00, depth: 25, confidence: 30, drama: 'SUSPICIOUS', panic: 'ELEVATED', type: 'buy' },
+  { price: 104250.00, amount: 5.000, total: 521250.00, depth: 55, confidence: 15, drama: 'HIGH', panic: 'SEVERE', type: 'buy' },
+  { price: 104200.00, amount: 12.800, total: 1333760.00, depth: 90, confidence: 5, drama: 'MAXIMUM', panic: 'CHAOTIC', type: 'buy' },
+];
+
+export const INITIAL_PORTFOLIO: PortfolioHolding[] = [
+  { symbol: 'BTC', name: 'Bitcoin', amount: 1.45, avgPrice: 62000, currentPrice: 104321.42, value: 151266.06, pnl: 61366.06, pnlPercent: 68.25, regretScore: 12 },
+  { symbol: 'ETH', name: 'Ethereum', amount: 8.50, avgPrice: 2800, currentPrice: 3892.15, value: 33083.27, pnl: 9283.27, pnlPercent: 39.00, regretScore: 28 },
+  { symbol: 'SOL', name: 'Solana', amount: 45.00, avgPrice: 110, currentPrice: 242.80, value: 10926.00, pnl: 5976.00, pnlPercent: 120.72, regretScore: 5 },
+  { symbol: 'PANIC', name: 'PanicX Token', amount: 10000, avgPrice: 0.50, currentPrice: 42.069, value: 420690.00, pnl: 415690.00, pnlPercent: 8313.80, regretScore: 0 },
+  { symbol: 'COPE', name: 'Pure Cope Coin', amount: 5000000, avgPrice: 0.001, currentPrice: 0.000042, value: 210.00, pnl: -4790.00, pnlPercent: -95.80, regretScore: 99 },
+];
+
+export const WEATHERS: WeatherInfo[] = [
+  { state: 'sunshine', title: '☀️ Bullish Sunshine', subtitle: 'Candles are suspiciously green.', icon: '☀️', temp: '42°C' },
+  { state: 'nervous', title: '🌤️ Slightly Nervous', subtitle: 'Tension in the order book.', icon: '🌤️', temp: '28°C' },
+  { state: 'confused', title: '🌥️ Confused', subtitle: 'Market is sideways and dizzy.', icon: '🌥️', temp: '19°C' },
+  { state: 'drizzle', title: '🌧️ Bearish Drizzle', subtitle: 'Red drops everywhere.', icon: '🌧️', temp: '11°C' },
+  { state: 'thunderstorm', title: '⛈️ Market Thunderstorm', subtitle: 'Liquidation lightning strike!', icon: '⛈️', temp: '4°C' },
+  { state: 'chaos', title: '🌪️ Absolute Chaos', subtitle: 'Weather remains unhelpful.', icon: '🌪️', temp: '-99°C' },
+];
+
+export const AI_QUOTES = {
+  click: [
+    "Interesting choice.",
+    "You clicked that on purpose?",
+    "That button was minding its own business.",
+    "Bold strategy. Let's see if it pays off.",
+    "Did you consult your financial advisor before that click?",
+  ],
+  repeatClick: [
+    "You clicked that on purpose?",
+    "We need to talk.",
+    "Is your mouse double clicking or are you just impatient?",
+    "Clicking it faster won't change the algorithm.",
+    "Okay, calm down.",
+  ],
+  refresh: [
+    "Again?",
+    "Welcome back. Again.",
+    "Refreshing doesn't change reality.",
+    "We refreshed anyway.",
+  ],
+  advanced: [
+    "You absolutely don't need this.",
+    "We warned you.",
+    "Congratulations, you opened controls you don't understand.",
+  ],
+  panicMode: [
+    "You asked for this.",
+    "Deploying emotional support subroutines...",
+    "Everything is glowing red. Happy now?",
+  ],
+  close: [
+    "Leaving already?",
+    "I'll be right here when you regret this.",
+  ],
+  idle: [
+    "Are you waiting for something?",
+    "Still there?",
+    "The charts aren't going to click themselves.",
+    "I'm keeping track of your idle duration.",
+  ],
+  return: [
+    "Oh. You're back.",
+    "Did you find what you were looking for?",
+  ]
+};
